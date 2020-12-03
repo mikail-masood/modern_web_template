@@ -1,28 +1,47 @@
 *{
-  --header-font: 'Karla', sans-serif;
-  --body-font: 'Rubik', sans-serif;
+  --header-font: 'Halant', serif;
+  --body-font: 'Source Sans Pro', sans-serif;
+  --main-font-color: #082E2F;
+  --secondary-font-color: #FFFFFF;
+  --bg-main-color: #FFF5EF;
+  --bg-secondary-color: #FFFFFF;
+  --secondary-color1: #FDA372;
+  --secondary-color2: #90D0AF;
+  --accent-color1: #f8bdad;
+  --accent-color2:#469A9C;
+  --bg-footer-color: #082E2F;
 }
+@font-face{
+  font-family: handWritten;
+  src: url(/media/fonts/Mikail-Regular.ttf);
+}
+
+#body{
+  background-color: var(--bg-main-color);
+}
+/* Nav */
 
 nav{
   position: absolute;
   top: 0;
   left: 0;
-  font-family: var(--header-font);
-  background-color: black;
-  color: white;
+  font-family: var(--body-font);
+  background-color: var(--bg-secondary-color);
+  color:var(--main-font-color);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 a{
   text-decoration: none;
-  color: white;
+  color: var(--main-font-color);
 }
 .logo {
   justify-content: center;
   text-align: center;
   position: relative;
   margin-top: 16px;
+  margin-left: 3%;
 }
 .navbar {
   width: 100%;
@@ -39,21 +58,27 @@ a{
   padding-right: 10% ;
 }
 
-.special{
-  background-color: red;
-  padding-left: 10%;
+.navbar_special{
+  background-color: var(--secondary-color1);
+  color: var(--secondary-font-color);
+  padding: 1% 2%;
+  text-align: center;
 }
+
+/* Landing Section */
 
 .landing_section{
   padding: 15% 5% 10% 5%;
   display: flex;
   justify-content: space-evenly;
-  background-color: #f8bdad;;
+  background-color: var(--bg-main-color);
 }
 
 .landing_section-title{
+  color: var(--main-font-color);
   font-family: var(--header-font);
   font-size: 75px;
+  font-weight: normal ;
   margin-top: 5%;
   margin-left: 5%;
   width: max-content;
@@ -62,24 +87,53 @@ a{
 }
 
 .landing_section-subtitle{
+  color: var(--main-font-color);
   font-family: var(--body-font);
   font-size: 35px;
+  font-weight: normal ;
   margin-left: 8%;
   z-index: 1;
   position: relative;
 }
 
+.landing_section-button{
+  color: var(--secondary-font-color);
+  padding: 25px;
+  border-radius: 50%;
+  background-color: var(--secondary-color2);
+  border: none;
+  transform:translate(-50%,-50%);
+}
+
+.landing_section-button-text{
+  font-family: var(--body-font);
+  font-weight: normal;
+  font-size: 16px;
+}
+
 .big-box{
   height: 550px;
   width: 700px;
-  border: 8px solid black;
-  z-index: -1;
+  border: 8px solid var(--main-font-color);
+  z-index: 0;
   position: relative;
   margin-left: -22%;
   margin-top: -5%;
 }
 
+.button_wrapper{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 150px;
+  width: 150px;
+  padding:25px
+}
+
+/* Info Section */
+
 .info_section{
+  background-color: var(--bg-main-color);
   padding: 10% 5%;
   display: flex;
   justify-content: space-evenly;
@@ -88,6 +142,7 @@ a{
 .info_section-title{
   font-family: var(--header-font);
   font-size: 55px;
+  font-weight: normal;
   margin-top: 5%;
   margin-left: 5%;
   width: max-content;
@@ -98,6 +153,7 @@ a{
 .info_section-subtitle {
   font-family: var(--body-font);
   font-size: 30px;
+  font-weight: normal;
   margin-left: 8%;
   z-index: 1;
   position: relative;
@@ -110,4 +166,51 @@ a{
   z-index: -1;
   position: relative;
   
+}
+
+/* Testimonial Section */
+
+.testimonial_section{
+  background-color: var(--bg-main-color);
+  padding: 5% 5%;
+}
+
+.testimonial_section-title{
+  font-family: var(--body-font);
+  font-weight: normal;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.testimonial_section-carousel{
+  padding: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-box {
+  font-family: var(--body-font);
+  font-weight: normal;
+  margin-right: 3%;
+  text-align: center;
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+}
+
+.spacer{
+  height: 200px;
+  background-color: var(--bg-main-color);
+}
+
+/* Footer */
+
+.main_footer{
+  height: 500px;
+  background-color: var(--bg-footer-color);
+  color: var(--secondary-font-color);
+  font-family: var(--body-font);
+  font-weight: lighter;
+  font-size: 20px;
 }
