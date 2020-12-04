@@ -130,6 +130,43 @@ a{
   padding:25px
 }
 
+/* Slide in buttons */
+*, *:before, *:after {
+  box-sizing: inherit;
+  
+}
+
+.align-right {
+  float: right;
+  margin-left: 10px;
+  
+}
+
+.icon_wrapper {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  background-color: var(--accent-color2);
+  z-index: 2;
+  opacity: 1;
+}
+
+.slide-in {
+  opacity: 0;
+  transition: all .5s;
+  
+}
+
+.align-right.slide-in {
+  transform: translateX(-30%) scale(0.95);
+  
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0%) scale(1);
+}
+
 /* Info Section */
 
 .info_section{
@@ -163,7 +200,7 @@ a{
   height: 500px;
   width: 500px;
   border: 5px solid black;
-  z-index: -1;
+  z-index: 0;
   position: relative;
   
 }
