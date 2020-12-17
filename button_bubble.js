@@ -7,8 +7,8 @@ function bubble(e) {
   let {offsetX: x, offsetY: y} = e;
 
   if (this !== e.target) {
-    x = e.offsetX;
-    y = e.offsetY;
+    x = x + e.target.offsetLeft;
+    y = y + e.target.offsetTop;
   }
   
   const xWalk = Math.round((x/width * walk) - (walk/2));
@@ -18,7 +18,9 @@ function bubble(e) {
   btn.style.top= `${yWalk}px`;
 
   console.log('complete animation');
-  console.log(e)
+  console.log(width, height);
+  console.log(x, y);
+
 }
 
 button.addEventListener('mousemove', bubble);
